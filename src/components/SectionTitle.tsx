@@ -10,15 +10,32 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle, isVisible 
   if (title === "") {return}
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-20 bg-white shadow-lg rounded-r-xl p-4"
-    >
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <h2 className="text-lg text-gray-600">{subtitle}</h2>
-    </motion.div>
+    <div className="fixed top-40 left-56 flex flex-col gap-2">
+      <motion.h1
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
+        transition={{ duration: 0.5 }}
+        className="text-[32pt] font-bold font-mono"
+      >
+        {title}
+      </motion.h1>
+      
+      <motion.div
+        initial={{ width: 0, opacity: 0 }}
+        animate={{ width: isVisible ? "150%" : 0, opacity: isVisible ? 1 : 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
+        className="h-[2px] bg-gray-600"
+      />
+      
+      <motion.h2
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-2xl text-gray-600 font-mono"
+      >
+        {subtitle}
+      </motion.h2>
+    </div>
   );
 };
 

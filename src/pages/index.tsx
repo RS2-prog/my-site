@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import SectionTitle from "../components/SectionTitle"
 import { sections } from "@/types/sectionTypes";
 import Header from "@/components/header/Header";
+import ScrollBar from "@/components/ScrollBar";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,10 +16,8 @@ export default function Home() {
       let adjustedScrollY;
 
       if (scrollY > lastScrollY) {
-        // 下スクロール時 (1/5のsectionHeightを加算)
         adjustedScrollY = scrollY + sectionHeight / 5;
       } else {
-        // 上スクロール時 (4/5のsectionHeightを減算)
         adjustedScrollY = scrollY + (sectionHeight * 4) / 5;
       }
 
@@ -42,6 +41,7 @@ export default function Home() {
   return (
     <div>
       <Header/>
+      <ScrollBar/>
       <SectionTitle title={sections[activeIndex]?.title || ""} subtitle={sections[activeIndex]?.subtitle || ""} isVisible={isVisible} />
       {sections.map((_, index) => (
         < _.component 

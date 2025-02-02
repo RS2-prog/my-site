@@ -1,3 +1,4 @@
+import ProfileSection from "@/components/sections/ProfileSection";
 import Top from "@/components/sections/Top";
 import TempSection from "@/components/TempSection";
 
@@ -16,7 +17,7 @@ export type SectionProps = {
 // セクションリスト
 export const sections: Section[] = [
   { title: "", subtitle: "", component: Top },
-  { title: "Who I Am", subtitle: "自己紹介", component: TempSection },
+  { title: "Who I Am", subtitle: "自己紹介", component: ProfileSection },
   { title: "My Journey", subtitle: "これまでの歩み", component: TempSection },
   { title: "My Tech Toolbox", subtitle: "活用するテック", component: TempSection },
   { title: "Beyond Tech", subtitle: "テックだけではない", component: TempSection },
