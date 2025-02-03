@@ -33,7 +33,7 @@ const ScrollBar = () => {
   if (sectionHeight === 0) return null; 
 
   return (
-    <div className={`fixed bottom-20 right-10 transition-opacity duration-500 ease-in-out ${
+    <div className={`fixed bottom-20 right-10 transition-opacity duration-500 ease-in-out z-100 ${
       isVisible ? "opacity-100" : "opacity-50"
     }`}>
       <div className="flex flex-col items-center">
@@ -56,7 +56,7 @@ const ScrollBar = () => {
               )}
               <button
                 onClick={() => scrollToSection(index)}
-                className="w-4 h-4 rounded-full bg-gray-300 relative overflow-hidden hover:bg-[#9ECED8] transition-all"
+                className="w-4 h-4 rounded-full bg-gray-300 relative overflow-hidden hover:bg-[#9ECED8] transition-all pointer-events-auto"
               >
                 <div
                   className="absolute w-full h-full bg-black transition-all"

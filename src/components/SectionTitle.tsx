@@ -10,7 +10,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle, isVisible 
   if (title === "") {return}
 
   return (
-    <div className="fixed top-40 left-56 flex flex-col gap-2">
+    <div className="fixed top-[14.8vh] left-[11.67vw] flex flex-col gap-2">
       <motion.h1
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}

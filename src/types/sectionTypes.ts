@@ -1,4 +1,6 @@
+import HistorySection from "@/components/sections/HistorySection";
 import ProfileSection from "@/components/sections/ProfileSection";
+import SkillSection from "@/components/sections/SkillSection";
 import Top from "@/components/sections/Top";
 import TempSection from "@/components/TempSection";
 
@@ -18,9 +20,9 @@ export type SectionProps = {
 export const sections: Section[] = [
   { title: "", subtitle: "", component: Top },
   { title: "Who I Am", subtitle: "自己紹介", component: ProfileSection },
-  { title: "My Journey", subtitle: "これまでの歩み", component: TempSection },
-  { title: "My Tech Toolbox", subtitle: "活用するテック", component: TempSection },
-  { title: "Beyond Tech", subtitle: "テックだけではない", component: TempSection },
-  { title: "Strengths That Drive Me", subtitle: "私を支える強み", component: TempSection },
-  { title: "Next Stage", subtitle: "次なる目標へ", component: TempSection },
+  { title: "My Journey", subtitle: "経歴記録", component: HistorySection },
+  { title: "Core Technologies", subtitle: "主要技術", component: SkillSection },
+  { title: "Development Tools", subtitle: "基盤技術", component: TempSection },
+  { title: "Beyond Skills", subtitle: "技術外面", component: TempSection },
+  { title: "Next Stage", subtitle: "未来展望", component: TempSection },
 ];
