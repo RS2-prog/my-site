@@ -56,7 +56,7 @@ const Top: React.FC<SectionProps> = ({ active }) => {
     <div className={`h-screen w-full ${active ? 'overflow-y-auto' : 'overflow-y-hidden'} bg-[#ecf7fa]
     flex flex-col scrollbar-hide`}>
       <div
-        className='w-full h-1/4 flex flex-col justify-center items-center'
+        className='w-full h-[30%] flex flex-col justify-center items-center'
       >
         <motion.div
           initial={{ opacity: 1, y: 0 }}

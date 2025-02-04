@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import SectionTitle from "../components/SectionTitle"
+import SectionTitle from "../components/utils/SectionTitle"
 import { sections } from "@/types/sectionTypes";
 import Header from "@/components/header/Header";
-import ScrollBar from "@/components/ScrollBar";
+import ScrollBar from "@/components/utils/ScrollBar";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);

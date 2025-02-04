@@ -1,8 +1,10 @@
+import GoalSection from "@/components/sections/GoalSection";
 import HistorySection from "@/components/sections/HistorySection";
+import OtherSkillSection from "@/components/sections/OtherSkillSection";
 import ProfileSection from "@/components/sections/ProfileSection";
+import PRSection from "@/components/sections/PRSection";
 import SkillSection from "@/components/sections/SkillSection";
 import Top from "@/components/sections/Top";
-import TempSection from "@/components/TempSection";
 
 // ホームページセクションプロパティ
 export type Section = {
@@ -22,7 +24,7 @@ export const sections: Section[] = [
   { title: "Who I Am", subtitle: "自己紹介", component: ProfileSection },
   { title: "My Journey", subtitle: "経歴記録", component: HistorySection },
   { title: "Core Technologies", subtitle: "主要技術", component: SkillSection },
-  { title: "Development Tools", subtitle: "基盤技術", component: TempSection },
-  { title: "Beyond Skills", subtitle: "技術外面", component: TempSection },
-  { title: "Next Stage", subtitle: "未来展望", component: TempSection },
+  { title: "Development Tools", subtitle: "基盤技術", component: OtherSkillSection },
+  { title: "Beyond Skills", subtitle: "技術以外", component: PRSection },
+  { title: "Next Stage", subtitle: "未来展望", component: GoalSection },
 ];

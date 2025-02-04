@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'motion/react'
 import { SectionProps } from '@/types/sectionTypes'
+import LinkButton from '../utils/LinkButton';
+import { links } from '../header/Header';
 
 const ProfileSection: React.FC<SectionProps> = ({ active }) => {
   const myName = "R.S.";
@@ -9,18 +11,20 @@ const ProfileSection: React.FC<SectionProps> = ({ active }) => {
   return (
     <div
       className={`h-screen w-full ${active ? 'overflow-y-auto' : 'overflow-y-hidden'} bg-[#ecf7fa]
-      flex items-center `}
+      flex relative`}
     >
-      <div className='w-2/5 ml-[20%]'>
+      
+      <div className='w-2/5 ml-[20%] mb-[10%] mt-auto'>
         <motion.div
           className='text-[32pt] mb-4 font-mono'
         >
           {myName}
         </motion.div>
         <motion.div
-          className="text-[18pt] leading-loose tracking-wider"
+          className="text-[18pt] leading-loose tracking-wider relative"
         >
           {profileText}
+          <LinkButton href={links.about} label='view more' style='mt-4'/>
         </motion.div>
       </div>
     </div>
