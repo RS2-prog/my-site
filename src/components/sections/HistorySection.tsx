@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { SectionProps } from '@/types/sectionTypes'
+import LinkButton from '../utils/LinkButton';
+import { links } from '../header/Header';
 
 const HistorySection: React.FC<SectionProps> = ({ active }) => {
   const events = [
@@ -8,6 +10,7 @@ const HistorySection: React.FC<SectionProps> = ({ active }) => {
     {date: "2022/04", text: "ディスカウントショップにて消耗品の販売に従事"},
     {date: "2022/12", text: "プログラミングの独学を開始"},
     {date: "2023/07", text: "エンジニアに転職し、WEBベースの開発に携わる"},
+    {date: "", text: ""}
   ];
   
   // 状態管理
@@ -50,12 +53,19 @@ const HistorySection: React.FC<SectionProps> = ({ active }) => {
               transition={{ duration: 0.5, delay: index * 0.3 }}
               className="relative flex items-center space-x-6"
             >
-              <span className="text-gray-600 text-[20pt] w-24">{event.date}</span>
-              <p className="text-gray-800 text-[16pt]">{event.text}</p>
+              {index !== events.length - 1 ? (
+                <>
+                  <span className="text-gray-600 text-[20pt] w-24">{event.date}</span>
+                  <p className="text-gray-800 text-[16pt]">{event.text}</p>
+                </>
+              ) : (
+                <LinkButton href={links.about} label="view more" />
+              )}
             </motion.li>
           ))}
         </ul>
       </div>
+
     </div>
   )
 }

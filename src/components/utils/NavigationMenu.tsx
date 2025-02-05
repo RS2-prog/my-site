@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import React, { useEffect } from "react";
 
 export type PageContentProps = {
   id: string;
@@ -6,15 +7,18 @@ export type PageContentProps = {
   offset?: number;
 };
 
-const NavigationMenu = ( sections: PageContentProps[] ) => {
+type NavigationProps = {
+  sections: PageContentProps[];
+}
+
+const NavigationMenu: React.FC<NavigationProps> = ({ sections }) => {
   // 各セクションのオフセット値を取得
   useEffect(() => {
     const updateOffsets = () => {
-      const offsets = {};
       sections.forEach((section) => {
         const element = document.getElementById(section.id);
         if (element) {
-          section.offset = element.getBoundingClientRect().top + window.scrollY;
+          section.offset = element.getBoundingClientRect().top + window.scrollY - 50;
         }
       });
     };
@@ -36,16 +40,20 @@ const NavigationMenu = ( sections: PageContentProps[] ) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow p-4 z-10">
-      <ul className="flex gap-4">
+    <nav className="fixed top-[15%] right-[15%] p-4 z-10 border-l-[1px] border-black">
+      <div className="font-mono text-[16pt] mb-6">Index</div>
+      <ul className="flex flex-col space-y-6">
         {sections.map((section) => (
           <li key={section.id}>
-            <button
+            <motion.button
+              initial={{ marginLeft: "0" }}
+              whileHover={{ marginLeft: "8px "}}
+              transition={{ duration: 0.5}}
               onClick={() => scrollToSection(section.offset)}
-              className="px-4 py-2 bg-blue-500 text-white rounded"
+              className=""
             >
               {section.label}
-            </button>
+            </motion.button>
           </li>
         ))}
       </ul>

@@ -1,6 +1,5 @@
 import { SectionProps } from '@/types/sectionTypes'
-import { motion } from 'motion/react';
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 const PRSection: React.FC<SectionProps> = ({ active }) => {
   const abilities = [

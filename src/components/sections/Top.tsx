@@ -7,7 +7,7 @@ const Top: React.FC<SectionProps> = ({ active }) => {
   const jpText = "アウトプットで成長の軌跡を刻む";
   const introText1 = "Portfolio of R.S.";
   const introText2 = "WEBの道を進むエンジニア";
-  const typingSpeed = 100;
+  const typingSpeed = 50;
   const cursorBlinkSpeed = 500;
 
   // 状態管理

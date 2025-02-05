@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SectionTitle from "../components/utils/SectionTitle"
 import { sections } from "@/types/sectionTypes";
 import Header from "@/components/header/Header";

@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import SkillSpiderChart from '../contents/SkillSpiderChart'
 import ArrowButton from '../utils/ArrowButton'
+import LinkButton from '../utils/LinkButton'
+import { links } from '../header/Header'
 
 const SkillSection: React.FC<SectionProps> = ({ active }) => {
   const skills = [
@@ -13,7 +15,7 @@ const SkillSection: React.FC<SectionProps> = ({ active }) => {
     {language: "HTML/CSS", expand: "Tailwind, Bootstrap"}
   ];
 
-  const [detailDisplayed, setDetailDisplayed] = useState<boolean>(false);
+  const [detailDisplayed, setDetailDisplayed] = useState<boolean>(true);
 
   const handleClick = () => {
     setDetailDisplayed(!detailDisplayed);
@@ -41,12 +43,19 @@ const SkillSection: React.FC<SectionProps> = ({ active }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: detailDisplayed ? 1 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`w-[40%] h-[99%] space-y-4 ml-auto ${detailDisplayed ? 'visiable' : 'hidden'} flex flex-col justify-center`}
+        className={`w-[40%] h-[99%] space-y-7 ml-auto ${detailDisplayed ? 'visiable' : 'hidden'} flex flex-col justify-center`}
       >
         {skills.map((skill, index) => (
           <li key={index}>
-            <p className='font-mono text-lg'>{skill.language}</p>
-            <p className='p-4'>{skill.expand}</p>
+            {index !== skills.length - 1 ? (
+              <>
+                <p className='font-mono text-lg'>{skill.language}</p>
+                <p className='p-4'>{skill.expand}</p>
+              </>   
+            ) : (
+              <LinkButton href={links.about} label='view more'/>
+            )}
+            
           </li>
         ))}
       </motion.ul>
