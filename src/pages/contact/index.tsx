@@ -38,9 +38,9 @@ const Contact = () => {
           <div className="flex flex-col items-center mt-4 space-y-4">
             {/* GitHubリンク */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/RS2-prog"
               target="_blank"
-              className="flex items-center text-blue-600 hover:text-blue-800 text-[16pt]"
+              className="flex items-center text-black hover:text-gray-600 text-[16pt]"
               rel="noopener noreferrer"
             >
               <svg
@@ -56,9 +56,9 @@ const Contact = () => {
             
             {/* Qiitaリンク */}
             <a
-              href="https://qiita.com/yourusername"
+              href="https://qiita.com/Ryu_S_2025"
               target="_blank"
-              className="flex items-center text-green-600 hover:text-green-800 text-[16pt]"
+              className="flex items-center text-black hover:text-green-600 text-[16pt]"
               rel="noopener noreferrer"
             >
               <svg

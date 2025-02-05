@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const ScrollBar = () => {
-  const numSections = 7;
+  const numSections = 6;
   const [sectionHeight, setSectionHeight] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

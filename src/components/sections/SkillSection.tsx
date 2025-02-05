@@ -43,14 +43,14 @@ const SkillSection: React.FC<SectionProps> = ({ active }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: detailDisplayed ? 1 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`w-[40%] h-[99%] space-y-7 ml-auto ${detailDisplayed ? 'visiable' : 'hidden'} flex flex-col justify-center`}
+        className={`w-[40%] h-[90%] gap-[5vh] ml-auto ${detailDisplayed ? 'visible' : 'hidden'} flex flex-col justify-center`}
       >
         {skills.map((skill, index) => (
           <li key={index}>
             {index !== skills.length - 1 ? (
               <>
-                <p className='font-mono text-lg'>{skill.language}</p>
-                <p className='p-4'>{skill.expand}</p>
+                <p className='font-mono text-2xl'>{skill.language}</p>
+                <p className='p-4 text-lg'>{skill.expand}</p>
               </>   
             ) : (
               <LinkButton href={links.about} label='view more'/>

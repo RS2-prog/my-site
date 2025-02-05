@@ -6,7 +6,7 @@ type ArrowButtonProps = {
 }
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({ onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = () => {

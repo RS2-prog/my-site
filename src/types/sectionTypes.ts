@@ -24,7 +24,7 @@ export const sections: Section[] = [
   { title: "Who I Am", subtitle: "自己紹介", component: ProfileSection },
   { title: "My Journey", subtitle: "経歴記録", component: HistorySection },
   { title: "Core Technologies", subtitle: "主要技術", component: SkillSection },
-  { title: "Development Tools", subtitle: "基盤技術", component: OtherSkillSection },
+  // { title: "Development Tools", subtitle: "基盤技術", component: OtherSkillSection },
   { title: "Beyond Skills", subtitle: "技術以外", component: PRSection },
   { title: "Next Stage", subtitle: "未来展望", component: GoalSection },
 ];
