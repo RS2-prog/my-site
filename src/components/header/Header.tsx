@@ -5,7 +5,7 @@ export const links = {
   home: "/",
   about: "/about",
   works: "/preparing",
-  contact: "/preparing"
+  contact: "/contact"
 }
 
 const Header = () => {
