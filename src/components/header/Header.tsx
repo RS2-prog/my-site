@@ -4,7 +4,7 @@ import LinkItem from './LinkItem';
 export const links = {
   home: "/",
   about: "/about",
-  works: "/preparing",
+  works: "/works",
   contact: "/contact"
 }
 

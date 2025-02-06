@@ -8,10 +8,15 @@ export type PageContentProps = {
 };
 
 type NavigationProps = {
+  wide?: boolean;
   sections: PageContentProps[];
 }
 
-const NavigationMenu: React.FC<NavigationProps> = ({ sections }) => {
+const NavigationMenu: React.FC<NavigationProps> = ({ sections, wide }) => {
+  if (wide === undefined) {
+    wide = false;
+  }
+
   // 各セクションのオフセット値を取得
   useEffect(() => {
     const updateOffsets = () => {
@@ -40,7 +45,7 @@ const NavigationMenu: React.FC<NavigationProps> = ({ sections }) => {
   };
 
   return (
-    <nav className="fixed top-[15%] right-[15%] p-4 z-10 border-l-[1px] border-black">
+    <nav className={`fixed ${wide ? 'right-[5%]' : 'right-[15%]'} top-[15%]  p-4 z-10 border-l-[1px] border-black`}>
       <div className="font-mono text-[16pt] mb-6">Index</div>
       <ul className="flex flex-col space-y-6">
         {sections.map((section) => (
