@@ -10,7 +10,7 @@ const PreParing = () => {
         description="This page is coming soon"
         canonical="https://rs2025portfolio.com/"
       />
-      <div>
+      <div className='bg-[#ecf7fa]'>
         <Header />
         <div className='h-screen flex flex-col items-center justify-center'>
           <div className='font-mono text-[48pt]'>Coming Soon</div>

@@ -11,7 +11,7 @@ const Contact = () => {
         description="Contact to R.S."
         canonical="https://rs2025portfolio.com/"
       />
-      <div>
+      <div className='bg-[#ecf7fa]'>
         <Header />
         <div className="w-[60%] mx-auto flex h-screen items-center place-content-between">
           {/* Left Section - Contact Me */}

@@ -12,18 +12,20 @@ const Custom500 = () => {
         canonical="https://rs2025portfolio.com/"
       />
       <Header />
-      <div className='w-[120vh] mx-auto h-screen items-center place-content-between flex'>
-        <div className='items-center justify-center'>
-          <div className='text-[16pt]'>
-            大丈夫、R.S.のチャレンジもよく未知の困難に遭遇します
+      <div className='bg-[#ecf7fa]'>
+        <div className='w-[120vh] mx-auto h-screen items-center place-content-between flex '>
+          <div className='items-center justify-center'>
+            <div className='text-[16pt]'>
+              大丈夫、R.S.のチャレンジもよく未知の困難に遭遇します
+            </div>
+            <div className='text-[12pt] font-mono'>
+              500 Unexcepted Error
+            </div>
           </div>
-          <div className='text-[12pt] font-mono'>
-            500 Unexcepted Error
+          <div className='w-[1px] bg-black h-[30%] my-auto'></div>
+          <div>
+            <LinkButton href={links.contact} label='Report this'/>
           </div>
-        </div>
-        <div className='w-[1px] bg-black h-[30%] my-auto'></div>
-        <div>
-          <LinkButton href={links.contact} label='Report this'/>
         </div>
       </div>
     </>

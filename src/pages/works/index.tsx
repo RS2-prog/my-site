@@ -20,7 +20,7 @@ const index = () => {
         description="Some works by R.S."
         canonical="https://rs2025portfolio.com/"
       />
-      <div className='mt-24'>
+      <div className='pt-24 bg-[#ecf7fa]'>
         <Header />
         <NavigationMenu sections={pageContents} wide={true}/>
         <div className='w-[60%] mx-auto flex flex-col gap-4'> 

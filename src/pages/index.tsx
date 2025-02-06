@@ -3,7 +3,6 @@ import SectionTitle from "../components/utils/SectionTitle"
 import { sections } from "@/types/sectionTypes";
 import Header from "@/components/header/Header";
 import ScrollBar from "@/components/utils/ScrollBar";
-import { NextSeo } from "next-seo";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);

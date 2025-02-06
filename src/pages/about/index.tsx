@@ -18,11 +18,11 @@ const About = () => {
         description="About R.S."
         canonical="https://rs2025portfolio.com/"
       />
-      <div className='mt-24'>
+      <div className='pt-24 bg-[#ecf7fa]'>
         <Header/>
         <NavigationMenu sections={pageContents} />
         {/* <Breadcrumbs /> */}
-        <div className='w-[50%] mx-auto overflow-scroll scrollbar-hide flex flex-col items-start space-y-8'>
+        <div className='w-[50%] mx-auto overflow-scroll scrollbar-hide flex flex-col items-start space-y-8 '>
           <Label id={pageContents[0].id} label={pageContents[0].label} />
           <div className='w-full flex flex-col space-y-6'>
             <div className='flex flex-col space-y-6'>
