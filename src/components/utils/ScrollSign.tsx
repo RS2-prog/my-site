@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import React from 'react'
-import { Line, Polygon } from "@visx/shape";
+import { Polygon } from "@visx/shape";
 
 const ScrollSign = () => {
   return (
