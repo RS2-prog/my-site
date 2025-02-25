@@ -1,6 +1,7 @@
 import { SectionProps } from '@/types/sectionTypes'
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
+import ScrollSign from '../utils/ScrollSign';
 
 const Top: React.FC<SectionProps> = ({ active }) => {
   const enText = "Code carves the path of evolution. ";
@@ -56,7 +57,7 @@ const Top: React.FC<SectionProps> = ({ active }) => {
     <div className={`h-screen w-full ${active ? 'overflow-y-auto' : 'overflow-y-hidden'} bg-[#ecf7fa]
     flex flex-col scrollbar-hide`}>
       <div
-        className='w-full h-[30%] flex flex-col justify-center items-center'
+        className='w-full h-[23%] flex flex-col justify-end items-center'
       >
         <motion.div
           initial={{ opacity: 1, y: 0 }}
@@ -84,7 +85,7 @@ const Top: React.FC<SectionProps> = ({ active }) => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-full flex-1 flex justify-center items-center bg-cover bg-center"
+          className="w-full flex-1 flex justify-center items-center bg-cover bg-center bg-repeat-space"
           style={{ backgroundImage: "url('/static/image/top.png')" }}
         >
         </motion.div>
@@ -94,10 +95,11 @@ const Top: React.FC<SectionProps> = ({ active }) => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className='w-full h-1/5 flex flex-col justify-center items-center'
+          className='w-full h-[22%] flex flex-col justify-center items-center'
         >
           <p className='text-[16pt] font-mono'>{introText1}</p>
           <p className='text-[10pt]'>{introText2}</p>
+          <ScrollSign />
         </motion.div>
       ) : (
         <div className='w-full h-1/5'></div>
