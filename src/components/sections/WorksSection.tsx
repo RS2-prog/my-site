@@ -24,6 +24,7 @@ const WorksSection: React.FC<SectionProps> = ({ active }) => {
             hasQiita={item.hasQiita}
             githubLink={item.githubLink}
             qiitaLink={item.qiitaLink}
+            detail={item.detail}
           />
         ))}
       </div>

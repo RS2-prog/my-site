@@ -39,6 +39,7 @@ const index = () => {
                   hasQiita={item.hasQiita}
                   githubLink={item.githubLink}
                   qiitaLink={item.qiitaLink}
+                  detail={item.detail}
                 />
               ))
             ) : (
@@ -64,6 +65,7 @@ const index = () => {
                   hasQiita={item.hasQiita}
                   githubLink={item.githubLink}
                   qiitaLink={item.qiitaLink}
+                  detail={item.detail}
                 />
               ))
             ) : (
@@ -89,6 +91,7 @@ const index = () => {
                   hasQiita={item.hasQiita}
                   githubLink={item.githubLink}
                   qiitaLink={item.qiitaLink}
+                  detail={item.detail}
                 />
               ))
             ) : (
